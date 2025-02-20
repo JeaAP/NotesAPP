@@ -1,0 +1,229 @@
+:root {
+    --primary-color: #BFD8B8;
+    --secondary-color: #E2E2E2;
+    --delete-color: #ed6060;
+    --archive-color: #4d96da;
+    --accent-color: #C5E1A5;
+    --text-color: #333;
+    --button-color: #D1C9B6;
+    --button-hover-color: #B6B299;
+    --border-radius: 8px;
+    --padding: 16px;
+    --font-family: "Inter", serif;
+    --font-size: 16px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family);
+    color: var(--text-color);
+}
+
+.app-bar {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: var(--padding);
+    font-size: var(--font-size);
+    font-weight: bold;
+    background-color: var(--primary-color);
+}
+
+.app-bar h1 {
+    background: transparent;
+    padding: 0;
+    margin: 0;
+    color: white;
+}
+
+.app-bar nav {
+    display: flex; 
+    position: absolute;
+    right: 0;
+}
+
+.app-bar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    gap: var(--padding);
+}
+
+.app-bar li {
+    display: inline-block;
+    padding: var(--padding);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.app-bar a {
+    color: white;
+    text-decoration: none;
+}
+
+.app-bar a:hover {
+    letter-spacing: 2px;
+    color: #333;
+    opacity: 0.8;
+    transform: scale(1.02);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    padding: var(--padding);
+}
+
+note-form {
+    width: 100%;
+    max-width: 800px;
+}
+
+section {
+    width: 100%;
+    max-width: 800px;
+    padding: var(--padding);
+    border: 2px solid var(--secondary-color);
+    border-radius: var(--border-radius);
+    margin: var(--padding) auto;
+    text-align: center;
+}
+
+section h2 {
+    margin-bottom: var(--padding);
+    color: var(--primary-color);
+    font-weight: bold;
+    letter-spacing: 2px;
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+section h3 {
+    margin-bottom: var(--padding);
+    font-weight: bold;
+    letter-spacing: 2px;
+    background: linear-gradient(to right, black, var(--secondary-color));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+section form label {
+    display: flex;
+    margin-bottom: var(--padding);
+    gap: 8px;
+    font-weight: bold;
+    letter-spacing: 1.2px;
+    background: linear-gradient(to right, var(--primary-color), var(--text-color));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+section input[type="text"],
+section textarea,
+section input[type="datetime-local"] {
+    width: 100%;
+    padding: var(--padding);
+    margin-bottom: var(--padding);
+    border: 1px solid var(--secondary-color);
+    border-radius: var(--border-radius);
+    background-color: white;
+}
+
+section input[type="checkbox"] {
+    cursor: pointer;
+    margin-top: 4px;
+    margin-bottom: var(--padding);
+}
+
+section button[type="submit"] {
+    width: 100%;
+    padding: var(--padding);
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+}
+
+section button span {
+    background-color: transparent;
+    font-weight: bold;
+    color: white;
+}
+
+section .note {
+    padding: var(--padding);
+    border: 1px solid var(--secondary-color);
+    border-radius: var(--border-radius);
+    background-color: white;
+    margin-bottom: var(--padding);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+section .note h3 {
+    font-weight: bold;
+    margin-bottom: var(--padding);
+}
+
+section .note p {
+    margin-bottom: var(--padding);
+    line-height: 1.5;
+}
+
+section .note small {
+    display: block;
+    margin-bottom: var(--padding);
+    font-size: 0.875rem;
+    color: var(--secondary-color);
+}
+
+button {
+    padding: var(--padding);
+    background-color: var(--button-color);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.8;
+    transition: opacity 0.2s ease-in-out;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transform: scale(1.02);
+}
+
+.delete-btn {
+    background-color: var(--delete-color);
+}
+
+.archive-btn {
+    background-color: var(--archive-color);
+}
+
+footer {
+    background-color: var(--primary-color);
+    padding: var(--padding);
+    text-align: center;
+    position: static;
+    bottom: 0;
+    width: 100%;
+}
+
+footer h5 {
+    color: white;
+}
+
