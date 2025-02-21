@@ -164,6 +164,14 @@ section button span {
     color: white;
 }
 
+div#notes-container {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    gap: var(--padding);
+    margin: var(--padding) auto;
+    text-align: center;
+}
+
 section .note {
     padding: var(--padding);
     border: 1px solid var(--secondary-color);

@@ -39,6 +39,7 @@ class NoteForm extends HTMLElement {
     render() {
         this.innerHTML = `
             <section id="note-form-section">
+                <h2>Add New Note</h2>
                 <form id="note-form">
                     <div>
                         <label for="title">Title :</label>
@@ -128,8 +129,6 @@ class NoteItem extends HTMLElement {
     }
 
     render() {
-        this.setAttribute('data-id', this._note.id);
-
         this.innerHTML = `
             <div class="note" data-note-id="${this._note.id}" class="${this._note.archived ? 'archived' : ''}">
                 <h3 class="note-title">${this._note.title}</h3>
@@ -197,7 +196,7 @@ class NoteList extends HTMLElement {
 
     connectedCallback() {
         this.render();
-    }
+    }    
     
     render() {
         const noteItemElements = this._notes.map((note) => {
@@ -207,9 +206,11 @@ class NoteList extends HTMLElement {
         });
 
         this.innerHTML = '';
-        noteItemElements.forEach((noteItem) => {
-            this.appendChild(noteItem);
-        });
+        this.appendChild(this._style, ...noteItemElements);
+
+        // noteItemElements.forEach((noteItem) => {
+        //     this.appendChild(noteItem);
+        // });
     }
 }
 customElements.define('note-list', NoteList);
