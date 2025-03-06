@@ -1,9 +1,4 @@
-import {
-    createNote,
-    deleteNote,
-    archiveNote,
-    unarchiveNote,
-} from "./utils.js";
+import { createNote, deleteNote, archiveNote, unarchiveNote } from "./utils.js";
 
 class AppBar extends HTMLElement {
     constructor() {

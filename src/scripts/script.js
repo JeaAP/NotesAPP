@@ -1,7 +1,9 @@
+import '../styles/style.css';
 import { getNotes, getArchivedNotes } from "./utils.js";
 import "./components.js";
 import "./LoadingIndicator.js";
 
+// Rest of your code remains the same
 document.addEventListener("DOMContentLoaded", async () => {
     const notesContainer = document.querySelector("#notes-container");
     const searchInput = document.querySelector("#searchInput");
