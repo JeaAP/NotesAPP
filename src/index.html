@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Notes APP</title>
 
-    <link rel="stylesheet" href="/assets/styles/style.css">
+    <link rel="stylesheet" href="/src/styles/style.css">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
-    <script type="module" src="/assets/scripts/script.js"></script>    
+    <script type="module" src="/src/scripts/script.js"></script>    
 </head>
 <body>
 
@@ -21,6 +21,8 @@
     <main>
         
         <note-form></note-form>
+        
+        <loading-indicator></loading-indicator>
 
         <section id="searchSection">
             <h2>Search Notes</h2>
@@ -30,7 +32,7 @@
         <section id="notes-list-section">
             <h2>Your Notes</h2>
             <div id="notes-container">
-                <note-list></note-list>
+                <!-- Notes will be displayed here -->
             </div>
         </section>
 
